@@ -1,13 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.IdentityModel.Tokens;
+using System.ComponentModel.DataAnnotations;
 
 namespace API_propia.Data_Models
 {
     public class Reservation : BaseEntity
     {
-        [Required]
-        [Key]
-        public int Id { get; set; }
-
         [Required]
         public int NumberofGuests { get; set; }
 
@@ -28,5 +25,7 @@ namespace API_propia.Data_Models
         
         [Required, StringLength(60)]
         public string Surname { get; set; } = string.Empty;
+
+        public ICollection<Rooms> Rooms = new List<Rooms>(); 
     }
 }
