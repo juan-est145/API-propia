@@ -11,7 +11,7 @@ namespace API_propia.DataAccess
 
         }
 
-        DbSet<Reservation> Reservations { get; set; }
-        DbSet<Rooms> Rooms { get; set; }
+        public DbSet<Reservation> Reservations { get; set; }
+        public DbSet<Rooms> Rooms { get; set; }
     }
 }

@@ -12,6 +12,6 @@ namespace API_propia.Data_Models
         
         [Required]
         public bool Available { get; set; }
-        public Reservation Reservation { get; set; }
+        public Reservation? Reservation { get; set; }
     }
 }
