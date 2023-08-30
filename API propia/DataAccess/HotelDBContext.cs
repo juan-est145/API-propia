@@ -13,5 +13,6 @@ namespace API_propia.DataAccess
 
         public DbSet<Reservation> Reservations { get; set; }
         public DbSet<Rooms> Rooms { get; set; }
+        public DbSet<Users> Users { get; set; }
     }
 }
