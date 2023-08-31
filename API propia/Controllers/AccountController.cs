@@ -27,13 +27,13 @@ namespace API_propia.Controllers
             try
             {
                 var Token = new UserTokens();
-                var searchUser = _hotelDBContext.Users.Select(x => x).Where(x => x.Name == userLogin.UserName && x.Password == userLogin.Password).FirstOrDefault(); 
+                var searchUser = _hotelDBContext.Users.Select(x => x).Where(x => x.UserName == userLogin.UserName && x.Password == userLogin.Password).FirstOrDefault(); 
                 
                 if (searchUser != null)
                 {
                     Token = JwtHelpers.GenerateTokenKey(new UserTokens()
                     {
-                        UserName = searchUser.Name,
+                        UserName = searchUser.UserName,
                         EmailId = searchUser.EmailAddress,
                         Id = searchUser.Id,
                         GuiId = Guid.NewGuid()

@@ -23,12 +23,12 @@ namespace API_propia.Helpers
             
             if(userAccounts.UserName == "Admin")
             {
-                claims.Add(new Claim(ClaimTypes.Role, userAccounts.Role = "Administrator")); //If there is an error with roles, change userAccounts.Role = "Administrator" with just "Administrator" and also delete Role property from UserTokens class
+                claims.Add(new Claim(ClaimTypes.Role, userAccounts.Role = "Administrator"));
             }
 
             else
             {
-                claims.Add(new Claim(ClaimTypes.Role, userAccounts.Role = "User")); //If there is an error with roles, change userAccounts.Role = "User" with just "User"
+                claims.Add(new Claim(ClaimTypes.Role, userAccounts.Role = "User"));
             }
             return claims;
         }
